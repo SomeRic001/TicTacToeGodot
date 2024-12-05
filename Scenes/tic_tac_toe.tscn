@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://15nqe3qlkajo"]
+
+[ext_resource type="Texture2D" uid="uid://v8k4kjoexu0r" path="res://Assets/white-paper-texture.jpg" id="1_24ra2"]
+[ext_resource type="Texture2D" uid="uid://dkqobrsdy3jwm" path="res://Assets/TicTacBoard.png" id="2_6jf2a"]
+
+[node name="TicTacToe" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(574, 322.25)
+scale = Vector2(0.574, 0.475244)
+texture = ExtResource("1_24ra2")
+metadata/_edit_lock_ = true
+
+[node name="board" type="Sprite2D" parent="."]
+position = Vector2(585, 338)
+scale = Vector2(0.547205, 0.579598)
+texture = ExtResource("2_6jf2a")
+
+[node name="UI" type="CanvasLayer" parent="."]

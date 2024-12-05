@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://gvrybkirqryt"]
+
+[ext_resource type="Script" path="res://Scenes/main_menu.gd" id="1_bvrx5"]
+[ext_resource type="Texture2D" uid="uid://v8k4kjoexu0r" path="res://Assets/white-paper-texture.jpg" id="1_ideva"]
+[ext_resource type="FontFile" uid="uid://krq3b0a7og5o" path="res://Assets/Wonder Boys - Personal Use.ttf" id="2_2f2p8"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_bvrx5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(205, 21)
+texture = ExtResource("1_ideva")
+metadata/_edit_lock_ = true
+
+[node name="TicText" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.5
+offset_top = -107.0
+offset_right = 181.5
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TicText"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.73665, 0.0907522, 0.207145, 1)
+theme_override_colors/font_outline_color = Color(0.299547, 0.299547, 0.299547, 1)
+theme_override_fonts/font = ExtResource("2_2f2p8")
+theme_override_font_sizes/font_size = 80
+text = "TIC TAC TOE "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.5
+offset_top = -22.0
+offset_right = 40.5
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0.912728, 0.53012, 1)
+theme_override_fonts/font = ExtResource("2_2f2p8")
+theme_override_font_sizes/font_size = 40
+text = "PLAY"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.5
+offset_top = 41.0
+offset_right = 36.5
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="eXIT" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.940362, 5.34251e-06, 3.85046e-07, 1)
+theme_override_fonts/font = ExtResource("2_2f2p8")
+theme_override_font_sizes/font_size = 40
+text = "EXIT"
+
+[connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer2/eXIT" to="." method="_on_exit_pressed"]
