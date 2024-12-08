@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3c6cgaru4h1i"]
+
+[ext_resource type="Texture2D" uid="uid://dkqobrsdy3jwm" path="res://Assets/TicTacBoard.png" id="1_7w7yi"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(579, 313)
+scale = Vector2(0.7, 0.697)
+texture = ExtResource("1_7w7yi")
