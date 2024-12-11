@@ -8,9 +8,9 @@
 script = ExtResource("1_bvrx5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(205, 21)
+position = Vector2(834, 351)
+scale = Vector2(1.01178, 0.9054)
 texture = ExtResource("1_ideva")
-metadata/_edit_lock_ = true
 
 [node name="TicText" type="MarginContainer" parent="."]
 anchors_preset = 8

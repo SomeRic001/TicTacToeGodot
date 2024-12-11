@@ -1,18 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://15nqe3qlkajo"]
+[gd_scene load_steps=8 format=3 uid="uid://15nqe3qlkajo"]
 
 [ext_resource type="Script" path="res://Scenes/tic_tac_toe.gd" id="1_6o6p0"]
-[ext_resource type="Texture2D" uid="uid://v8k4kjoexu0r" path="res://Assets/white-paper-texture.jpg" id="1_24ra2"]
+[ext_resource type="PackedScene" uid="uid://b31ye2rsr2qep" path="res://Scenes/circle.tscn" id="2_clcwd"]
+[ext_resource type="PackedScene" uid="uid://dkvutju2g47ic" path="res://cross.tscn" id="3_ctmmx"]
 [ext_resource type="PackedScene" uid="uid://d3c6cgaru4h1i" path="res://gameplay.tscn" id="3_krx57"]
+[ext_resource type="Texture2D" uid="uid://bimv0m27uju28" path="res://Assets/Poster Texture.jpg" id="4_lg5q2"]
+[ext_resource type="PackedScene" uid="uid://bl7ll6rn6ywvm" path="res://Scenes/ui.tscn" id="5_25fln"]
+[ext_resource type="PackedScene" uid="uid://cabd2gaanhaal" path="res://Scenes/game_over.tscn" id="7_twqcb"]
 
 [node name="TicTacToe" type="Node2D"]
 position = Vector2(1, 0)
 script = ExtResource("1_6o6p0")
+circle_scn = ExtResource("2_clcwd")
+cross_scn = ExtResource("3_ctmmx")
 
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(575, 322)
-scale = Vector2(0.574, 0.475244)
-texture = ExtResource("1_24ra2")
-
-[node name="UI" type="CanvasLayer" parent="."]
+position = Vector2(444, 510)
+scale = Vector2(2.53743, 1.52901)
+texture = ExtResource("4_lg5q2")
 
 [node name="Gameplay" parent="." instance=ExtResource("3_krx57")]
+position = Vector2(319.3, 328.25)
+scale = Vector2(0.9, 0.9)
+
+[node name="UI" parent="." instance=ExtResource("5_25fln")]
+
+[node name="GameOver" parent="." instance=ExtResource("7_twqcb")]
+process_mode = 3
+scale = Vector2(1.00155, 0.992233)
+transform = Transform2D(1.00155, 0, 0, 0.992233, 0, 0)
