@@ -24,6 +24,7 @@ func _ready():
 	player_panel_pos = $UI/Turn.get_position()
 	print(player_panel_pos)
 	game()
+	get_tree().paused = false
 	$UI/panelcross.hide()
 	$UI/panelcir.show()
 	
