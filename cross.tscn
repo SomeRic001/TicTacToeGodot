@@ -1,6 +1,107 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkvutju2g47ic"]
+[gd_scene load_steps=25 format=3 uid="uid://dkvutju2g47ic"]
 
-[ext_resource type="Texture2D" uid="uid://ddr7j7qdulof4" path="res://Assets/cyan cross.png" id="1_aj1a7"]
+[ext_resource type="Texture2D" uid="uid://co8184y21skfv" path="res://Assets/c1.png" id="1_mb8b7"]
+[ext_resource type="Texture2D" uid="uid://dea5gb4uo8sy5" path="res://Assets/c2.png" id="2_yyqbf"]
+[ext_resource type="Texture2D" uid="uid://dnfg8765pwww4" path="res://Assets/c3.png" id="3_gtvuk"]
+[ext_resource type="Texture2D" uid="uid://2xa255jm7565" path="res://Assets/c4.png" id="4_rbhyi"]
+[ext_resource type="Texture2D" uid="uid://cicb4a8ac6qeb" path="res://Assets/c5.png" id="5_qtswt"]
+[ext_resource type="Texture2D" uid="uid://id0ck4baid4r" path="res://Assets/c6.png" id="6_uporf"]
+[ext_resource type="Texture2D" uid="uid://1visxru7h8p4" path="res://Assets/c7.png" id="7_eium2"]
+[ext_resource type="Texture2D" uid="uid://bmvwhinye353a" path="res://Assets/c8.png" id="8_gmv2s"]
+[ext_resource type="Texture2D" uid="uid://d0x13jrtxbt2s" path="res://Assets/c9.png" id="9_oafpg"]
+[ext_resource type="Texture2D" uid="uid://dxsoscracljne" path="res://Assets/c10.png" id="10_xb43c"]
+[ext_resource type="Texture2D" uid="uid://bobrc5ushpmem" path="res://Assets/c11.png" id="11_k1n3r"]
+[ext_resource type="Texture2D" uid="uid://cwqexgvln2kvx" path="res://Assets/c12.png" id="12_fkx53"]
+[ext_resource type="Texture2D" uid="uid://c2orb4gmpkc1e" path="res://Assets/c13.png" id="13_yclct"]
+[ext_resource type="Texture2D" uid="uid://bh5objb8aeuvg" path="res://Assets/c14.png" id="14_60p6l"]
+[ext_resource type="Texture2D" uid="uid://bhtgfpckdh8pk" path="res://Assets/c15.png" id="15_pvc6o"]
+[ext_resource type="Texture2D" uid="uid://drbe7cyiqgvd7" path="res://Assets/c16.png" id="16_5bbem"]
+[ext_resource type="Texture2D" uid="uid://d4adi2qkxmsuk" path="res://Assets/c17.png" id="17_jgc2k"]
+[ext_resource type="Texture2D" uid="uid://dr5lvfnuxmtgi" path="res://Assets/c18.png" id="18_4ihxu"]
+[ext_resource type="Texture2D" uid="uid://biujmcj410gn6" path="res://Assets/c19.png" id="19_pqsnk"]
+[ext_resource type="Texture2D" uid="uid://cwo2qhdmqmjx4" path="res://Assets/c20.png" id="20_k4kvg"]
+[ext_resource type="Texture2D" uid="uid://dox1lsrs2yb1w" path="res://Assets/c21.png" id="21_u81pk"]
+[ext_resource type="Texture2D" uid="uid://ftu4jhrt5s43" path="res://Assets/c22.png" id="22_aq2v6"]
+[ext_resource type="Texture2D" uid="uid://c8sg4mcis0lje" path="res://Assets/c23.png" id="23_jmulq"]
 
-[node name="Cross" type="Sprite2D"]
-texture = ExtResource("1_aj1a7")
+[sub_resource type="SpriteFrames" id="SpriteFrames_3np1j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mb8b7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yyqbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gtvuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rbhyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qtswt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uporf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eium2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gmv2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oafpg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xb43c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_k1n3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fkx53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yclct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_60p6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pvc6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5bbem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_jgc2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_4ihxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_pqsnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_k4kvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_u81pk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_aq2v6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_jmulq")
+}],
+"loop": false,
+"name": &"default",
+"speed": 60.0
+}]
+
+[node name="Cross" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_3np1j")
+frame = 22
+frame_progress = 1.0

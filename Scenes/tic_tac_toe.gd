@@ -3,6 +3,7 @@ extends Node2D
 @export var circle_scn: PackedScene
 @export var cross_scn:PackedScene
  
+var animation_complete = false 
 var moves:int
 var player : int 
 var player_panel_pos:Vector2i
@@ -44,24 +45,27 @@ func _input(event):
 					grid_data [grid_pos.x][grid_pos.y] = player
 					var marker_pos = (grid_pos*cell_size)+ Vector2i(cell_size/2,cell_size/2)-Vector2i(20,2)
 					marker(player,marker_pos)
+					player*=-1
+					await get_tree().create_timer(2.5).timeout
 					if check_win()==1:
 						$GameOver.get_node("MarginContainer/VBoxContainer/Label").text = "Player 1 Wins!"
 						$GameOver.show()
+						get_tree().paused = true
 						$UI/panelcross.hide()
 						$UI/panelcir.hide()
 					elif check_win()==-1:
 						$GameOver.get_node("MarginContainer/VBoxContainer/Label").text = "Player 2 Wins!"
 						$GameOver.show()
+						get_tree().paused = true
 						$UI/panelcross.hide()
 						$UI/panelcir.hide()
 					elif moves==9:
-						get_tree().paused = true
 						$GameOver.get_node("MarginContainer/VBoxContainer/Label").text = "Its a Draw!"
 						$GameOver.show()
+						get_tree().paused = true
 						$UI/panelcross.hide()
 						$UI/panelcir.hide()
 					print(grid_data)
-					player*=-1
 
 func game():
 	$GameOver.hide()
@@ -79,19 +83,19 @@ func marker(player,position):
 	if player==1:
 		var circle = circle_scn.instantiate()
 		circle.position =position
+		circle.play()
 		circle.scale=Vector2(0.06,0.06)
 		add_child(circle)
 		$UI/panelcross.show()
 		$UI/panelcir.hide()
-		
 	else:
 		var cross = cross_scn.instantiate()
 		cross.position = position
+		cross.play()
 		cross.scale = Vector2(0.07,0.07)
 		add_child(cross)
 		$UI/panelcross.hide()
 		$UI/panelcir.show()
-		
 func check_win():
 	for i in len(grid_data):
 		r_sum = grid_data[i][0] + grid_data[i][1]+grid_data[i][2]
