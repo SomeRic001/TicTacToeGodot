@@ -46,7 +46,7 @@ func _input(event):
 					var marker_pos = (grid_pos*cell_size)+ Vector2i(cell_size/2,cell_size/2)-Vector2i(20,2)
 					marker(player,marker_pos)
 					player*=-1
-					await get_tree().create_timer(2.5).timeout
+					await get_tree().create_timer(2.27).timeout
 					if check_win()==1:
 						$GameOver.get_node("MarginContainer/VBoxContainer/Label").text = "Player 1 Wins!"
 						$GameOver.show()
